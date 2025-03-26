@@ -1,0 +1,10 @@
+services:
+    Remyb98\DoctrineFieldEncrypt\Service\EncryptionService:
+        arguments:
+            $secret: '%kernel.secret%'
+
+    Remyb98\DoctrineFieldEncrypt\EventListener\EncryptSubscriber:
+        arguments:
+            $encryptionService: '@Remyb98\DoctrineFieldEncrypt\Service\EncryptionService'
+        tags:
+            - { name: doctrine.event_subscriber }

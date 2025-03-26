@@ -1,0 +1,31 @@
+{
+    "name": "remyb98/doctrine-field-encrypt",
+    "description": "Package that provides an #[Encrypt] attribute to automatically encrypt and decrypt fields in Doctrine entities.",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Remyb98\\DoctrineFieldEncrypt\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Remyb98\\DoctrineFieldEncrypt\\Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "php": ">=8.4",
+        "doctrine/orm": "^3.3",
+        "symfony/http-kernel": "^6.4",
+        "symfony/dependency-injection": "^6.4",
+        "symfony/config": "^6.4"
+    },
+    "authors": [
+        {
+            "name": "Remyb98"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^12.0"
+    }
+}
