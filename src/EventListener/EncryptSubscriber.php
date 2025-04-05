@@ -6,6 +6,7 @@ use Doctrine\Common\EventSubscriber;
 use Doctrine\ORM\Event\PostLoadEventArgs;
 use Doctrine\ORM\Event\PreUpdateEventArgs;
 use Doctrine\ORM\Event\PrePersistEventArgs;
+use Doctrine\ORM\Events;
 use Remyb98\DoctrineFieldEncrypt\Attribute\Encrypt;
 use Remyb98\DoctrineFieldEncrypt\Service\EncryptionService;
 use Remyb98\DoctrineFieldEncrypt\Interface\EncryptableEntity;
@@ -20,9 +21,9 @@ final readonly class EncryptSubscriber implements EventSubscriber
     public function getSubscribedEvents(): array
     {
         return [
-            'prePersist',
-            'preUpdate',
-            'postLoad',
+            Events::prePersist,
+            Events::preUpdate,
+            Events::postLoad,
         ];
     }
 
